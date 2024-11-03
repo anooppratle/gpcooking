@@ -128,8 +128,8 @@ const LandingPage = () => {
         </div>
 
         {/* Animated Background */}
-        <div className="absolute sm:left-80 inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute sm:left-80 inset-0 overflow-hidden pointer-events-none z-1">
+          <div className="absolute inset-0 flex items-center justify-center ">
             <div
               className="relative w-[900px] h-[900px]"
               style={{ transform: `scale(${scale})` }}
