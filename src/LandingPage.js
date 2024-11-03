@@ -153,7 +153,7 @@ const LandingPage = () => {
           />
 
           {/* Center Star (Fixed) */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[130px] h-[130px] flex items-center justify-center">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] h-[130px] flex items-center justify-center">
             <svg
               width="175"
               height="175"
