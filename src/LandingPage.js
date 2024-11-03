@@ -29,10 +29,9 @@ const LandingPage = () => {
     return () => clearInterval(animationInterval);
   }, [rotation]);
 
-  //   const handleSubmit = (e: React.FormEvent) => {
-  //     e.preventDefault();
-  //     console.log("Email submitted:", email);
-  //   };
+  const toggleTheme = () => {
+    setIsDark((prev) => !prev);
+  };
 
   return (
     <div>
@@ -41,10 +40,10 @@ const LandingPage = () => {
           isDark ? "dark bg-zinc-800" : "bg-white"
         }`}
       >
-        {/* Theme Toggle */}
+        {/* Theme Toggle - Updated for better responsiveness */}
         <button
-          onClick={() => setIsDark(!isDark)}
-          className="fixed top-4 right-4 p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+          onClick={toggleTheme}
+          className="fixed top-4 right-4 p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors z-50"
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
           {isDark ? (
@@ -61,6 +60,11 @@ const LandingPage = () => {
                 stroke="currentColor"
                 strokeWidth="2"
               />
+              <path
+                d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.364-8.364l-1.414 1.414M6.05 17.95l-1.414 1.414m15.364 0l-1.414-1.414M6.05 6.05L4.636 4.636"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
             </svg>
           ) : (
             <svg
@@ -70,9 +74,11 @@ const LandingPage = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.364-8.364l-1.414 1.414M6.05 17.95l-1.414 1.414m15.364 0l-1.414-1.414M6.05 6.05L4.636 4.636"
+                d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
                 stroke="currentColor"
                 strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           )}
